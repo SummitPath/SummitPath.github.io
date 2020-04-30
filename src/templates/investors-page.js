@@ -1,25 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import PricingPageTemplate from '../components/PricingPageTemplate'
+import InvestorsPageTemplate from '../components/HomePageTemplate'
 import Layout from '../components/Layout'
 
-const PricingPage = ({ data }) => {
+const InvestorsPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
-      <PricingPageTemplate
+      <InvestorsPageTemplate
         title={frontmatter.title}
         meta_title={frontmatter.meta_title}
         meta_description={frontmatter.meta_description}
-        pricing={frontmatter.pricing}
+        heading={frontmatter.heading}
+        description={frontmatter.description}
+        offerings={frontmatter.offerings}
+        testimonials={frontmatter.testimonials}
       />
     </Layout>
   )
 }
 
-PricingPage.propTypes = {
+InvestorsPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -27,24 +30,26 @@ PricingPage.propTypes = {
   }),
 }
 
-export default PricingPage
+export default InvestorsPage
 
-export const pricingPageQuery = graphql`
-  query PricingPage($id: String!) {
+export const pageQuery = graphql`
+  query InvestorsPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
         meta_title
         meta_description
-        pricing {
-          heading
-          description
-          plans {
-            description
-            items
-            plan
-            price
+        heading
+        description
+        offerings {
+          blurbs {
+            image
+            text
           }
+        }
+        testimonials {
+          author
+          quote
         }
       }
     }

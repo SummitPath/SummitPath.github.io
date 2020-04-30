@@ -1,7 +1,7 @@
 ---
-templateKey: 'home-page'
+templateKey: 'investors-page'
 title: Summit Path Real Estate Investment
-meta_title: Home | Summit Path Real Estate Investment
+meta_title: Investors | Summit Path Real Estate Investment
 meta_description: >-
   Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
   ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam

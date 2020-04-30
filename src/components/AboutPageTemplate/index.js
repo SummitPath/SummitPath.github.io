@@ -7,15 +7,13 @@ const AboutPageTemplate = ({ title, content, contentComponent }) => {
 
   return (
     <div>
-      <section className='hero is-primary is-bold is-medium'>
+      <section className='hero is-primary is-bold is-medium has-background'>
+      <img className="hero-background" src={require('../../assets/img/summitPathHeader.jpg')}/>
         <div className='hero-body'>
           <div className='container'>
             <div className='columns'>
               <div className='column is-10 is-offset-1'>
                 <div className='section'>
-                  <h1 className='title'>
-                    {title}
-                  </h1>
                 </div>
               </div>
             </div>

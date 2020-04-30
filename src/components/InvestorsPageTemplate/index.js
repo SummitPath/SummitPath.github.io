@@ -4,7 +4,7 @@ import Offerings from '../Offerings'
 import Testimonials from '../Testimonials'
 import PropTypes from 'prop-types'
 
-const HomePageTemplate = ({
+const InvestorsPageTemplate = ({
   title,
   heading,
   description,
@@ -55,7 +55,7 @@ const HomePageTemplate = ({
   </div>
 )
 
-HomePageTemplate.propTypes = {
+InvestorsPageTemplate.propTypes = {
   title: PropTypes.string,
   meta_title: PropTypes.string,
   meta_description: PropTypes.string,
@@ -68,4 +68,4 @@ HomePageTemplate.propTypes = {
 
 }
 
-export default HomePageTemplate
+export default InvestorsPageTemplate

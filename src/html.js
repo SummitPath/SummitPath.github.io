@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import favicon from './assets/img/favicon.ico'
+import favicon from './assets/img/logo.jpg'
 
 export default class HTML extends Component {
   render () {

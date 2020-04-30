@@ -1,7 +1,7 @@
 ---
-templateKey: pricing-page
-title: Pricing
-meta_title: Pricing | Gatsby Starter Business
+templateKey: rent-to-own-page
+title: Rent-to-Own
+meta_title: Rent-to-Own | Gatsby Starter Business
 meta_description: >-
   Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
   ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam

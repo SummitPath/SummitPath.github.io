@@ -17,7 +17,6 @@ const InvestorsPagePreview = ({ entry, getAsset }) => {
       heading={entry.getIn(['data', 'heading'])}
       description={entry.getIn(['data', 'description'])}
       offerings={{ blurbs }}
-      testimonials={testimonials}
     />
   )
 }

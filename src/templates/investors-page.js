@@ -16,7 +16,6 @@ const InvestorsPage = ({ data }) => {
         heading={frontmatter.heading}
         description={frontmatter.description}
         offerings={frontmatter.offerings}
-        testimonials={frontmatter.testimonials}
       />
     </Layout>
   )
@@ -43,13 +42,9 @@ export const pageQuery = graphql`
         description
         offerings {
           blurbs {
-            image
+            title
             text
           }
-        }
-        testimonials {
-          author
-          quote
         }
       }
     }

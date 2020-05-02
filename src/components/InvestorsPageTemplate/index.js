@@ -11,7 +11,6 @@ const InvestorsPageTemplate = ({
   offerings,
   meta_title,
   meta_description,
-  testimonials,
 }) => (
   <div>
     <Helmet>
@@ -64,7 +63,6 @@ InvestorsPageTemplate.propTypes = {
   offerings: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
-  testimonials: PropTypes.array,
 
 }
 

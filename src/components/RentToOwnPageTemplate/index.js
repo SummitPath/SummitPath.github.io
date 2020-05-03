@@ -1,63 +1,49 @@
 import React from 'react'
-import Helmet from 'react-helmet'
-import Pricing from '../Pricing'
+import Content from '../Content'
 import PropTypes from 'prop-types'
+import ReactPlayer from 'react-player'
 
-const RentToOwnPageTemplate = ({
-  title,
-  meta_title,
-  meta_description,
-  pricing,
-}) => (
-  <div>
-    <Helmet>
-      <title>{meta_title}</title>
-      <meta name='description' content={meta_description} />
-    </Helmet>
-    <section className='hero is-primary is-bold is-medium'>
-      <div className='hero-body'>
+const RentToOwnPageTemplate = ({ title, content, contentComponent }) => {
+  const PageContent = contentComponent || Content
+
+  return (
+    <div>
+      <section className='hero is-primary is-bold is-medium has-background'>
+      <img className="hero-background" src={require('../../assets/img/summitPathHeader.jpg')}/>
+        <div className='hero-body'>
+          <div className='container'>
+            <div className='columns'>
+              <div className='column is-10 is-offset-1'>
+                <div className='section'>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='section section--gradient'>
         <div className='container'>
           <div className='columns'>
             <div className='column is-10 is-offset-1'>
               <div className='section'>
-                <h1 className='title'>
-                  {title}
-                </h1>
+                <PageContent className='content' content={content} />
+                <ReactPlayer
+                  url='https://www.youtube.com/watch?v=u4_nqAYmJGM'
+                  className='react-player'
+                />
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section className='section section--gradient'>
-      <div className='container'>
-        <div className='section'>
-          <div className='columns'>
-            <div className='column is-10 is-offset-1'>
-              <div className='content'>
-                <h2 className='has-text-weight-semibold is-size-2'>
-                  {pricing.heading}
-                </h2>
-                <p className='is-size-5'>{pricing.description}</p>
-                <Pricing data={pricing.plans} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-)
+      </section>
+    </div>
+  )
+}
 
 RentToOwnPageTemplate.propTypes = {
-  title: PropTypes.string,
-  meta_title: PropTypes.string,
-  meta_description: PropTypes.string,
-  pricing: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    plans: PropTypes.array,
-  }),
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string,
+  contentComponent: PropTypes.func,
 }
 
 export default RentToOwnPageTemplate
